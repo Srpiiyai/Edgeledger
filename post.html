@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post One</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="/edgeledger/css/utilities.css">
+  <link rel="stylesheet" href="/edgeledger/css/style.css">
+</head>
+
+<body id="home">
+  <header class="hero blog">
+    <div id="navbar" class="navbar top">
+      <h1 class="logo">
+        <span class="text-primary"><i class="fas fa-book-open"></i> Edge</span>Ledger
+      </h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#cases">Cases</a></li>
+          <li><a href="index.html#blog">Blog</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="content">
+      <h1>Blog</h1>
+    </div>
+  </header>
+
+  <main>
+    <section class="post">
+      <h2>Blog Post One</h2>
+      <p class="meta">
+        <i class="fas fa-user"></i> Posted by <strong>Jane Lorem</strong> | November 8th 2023
+      </p>
+      <img src="/edgeledger/img/blog/blog1.jpg" alt="">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa explicabo ad minus excepturi earum
+        laudantium eum nobis delectus commodi rem, tempora eius debitis ipsum itaque doloribus. Dicta dolorum
+        maiores inventore?</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id sit, tempora voluptatum tempore autem magnam a
+        itaque excepturi rem iure similique consequuntur aliquid quae. Est corporis ad architecto aliquam expedita
+        voluptas. Omnis fugiat quis debitis, veritatis repudiandae et adipisci porro unde, minus, praesentium ea!
+        Voluptatem vitae ipsam accusantium facilis doloremque, eligendi mollitia maxime dolorem inventore, esse eaque id
+        quisquam ad?</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque natus ipsum ad minus ipsa at repellat
+        voluptates voluptatibus illo tenetur itaque eligendi ex nobis, nemo perferendis amet eos pariatur alias dolore!
+        Quisquam laborum temporibus odit cupiditate quam ut nihil ratione nam nostrum est eaque vero expedita, beatae
+        iste necessitatibus reprehenderit.</p>
+    </section>
+  </main>
+
+  <footer class="footer bg-dark">
+    <div class="social">
+      <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+      <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+      <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+      <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+    </div>
+    <p>Copyright &copy; 2023 - Created by Jason von der Haar</p>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    let scrolled = false;
+
+    window.onscroll = function () {
+      if (window.pageYOffset > 100) {
+        navbar.classList.remove('top');
+        if (!scrolled) {
+          navbar.style.transform = 'translateY(-70px)';
+        }
+        setTimeout(function () {
+          navbar.style.transform = 'translateY(0)';
+          scrolled = true;
+        }, 700);
+      } else {
+        navbar.classList.add('top');
+        scrolled = false;
+      }
+    }
+  </script>
+</body>
+
+</html>
